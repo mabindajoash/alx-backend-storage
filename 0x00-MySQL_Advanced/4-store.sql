@@ -1,8 +1,8 @@
 -- Create a trigger
 -- Statement to create a trigger that decreases quantity after new order
 DELIMITER $$
-
-CREATE TRIGGER buy_items AFTER INSERT ON order
+DROP TRIGGER IF EXISTS reduce_quantity;
+CREATE TRIGGER buy_items AFTER INSERT ON `order`
 FOR EACH ROW
 BEGIN
 UPDATE items
