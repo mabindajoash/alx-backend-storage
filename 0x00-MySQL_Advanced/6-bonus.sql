@@ -15,5 +15,5 @@ END IF;
 SELECT id INTO project_id
 FROM projects WHERE name = project_name
 LIMIT 1;
-INSERT INTO correction VALUES(user_id, project_id, score);
+INSERT INTO corrections VALUES(user_id, project_id, score);
 END$$
